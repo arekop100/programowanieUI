@@ -11,6 +11,7 @@ import { LoginPageComponent } from './login-page/login-page.component';
   ],
   imports: [
     BrowserModule
+    Rea
   ],
   providers: [],
   bootstrap: [AppComponent]

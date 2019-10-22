@@ -4,18 +4,23 @@
 </head>
 
 
-<p>
+<label>
   Nazwa użytkowanika
-  <input [ngModel] = "firstName" type=text>
-</p>
+  <input  id="logininput" [ngModel] = "firstName" type=text [formControl]=""registerFromControl">
+</label>
 
-<p>
+<form [formGroup]="registerForm" (ngSubmit)="onSubmit">
+  <label>
   Hasło
-  <input [ngModel] = "haslo" type=text>
-</p>
+  <input [ngModel] = "haslo" type=text formControlName="loginName">
+  </label>
 
-<p>
+  <label>
   Powtórz Hasło
-  <input [ngModel] = "haslo" type=text>
-</p>
+  <input [ngModel] = "haslo" type=text formControlName="password">
+  </label>
 
+
+<input type="checkbox"><label class="check" for="checkbox">Zapamiętaj mnie!</label>
+<input type="submit" value="Login">
+</form>
